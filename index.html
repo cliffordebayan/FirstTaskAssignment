@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Button Example</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="frame">
+      <div class="card">
+        <!-- All pages -->
+        <div class="checkbox-wrapper">
+          <label class="checkbox">
+            <span class="label">All pages</span>
+            <input type="checkbox" class="select-all" />
+            <span class="checkmark">
+              <svg
+                width="19"
+                height="14"
+                viewBox="0 0 19 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1 7.6L7.03451 12.9672C7.05497 12.9854 7.08626 12.9837 7.1047 12.9635L18 1"
+                  stroke="white"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </span>
+          </label>
+        </div>
+
+        <!-- Divider -->
+        <div class="divider-wrapper">
+          <div class="divider"></div>
+        </div>
+
+        <!-- Pages -->
+        <div class="pages-wrapper">
+          <!-- Page 1 -->
+          <div class="checkbox-wrapper">
+            <label class="checkbox">
+              <span class="label">Page 1</span>
+              <input type="checkbox" class="item-checkbox" />
+              <span class="checkmark">
+                <svg
+                  width="19"
+                  height="14"
+                  viewBox="0 0 19 14"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1 7.6L7.03451 12.9672C7.05497 12.9854 7.08626 12.9837 7.1047 12.9635L18 1"
+                    stroke="white"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </span>
+            </label>
+          </div>
+
+          <!-- Page 2 -->
+          <div class="checkbox-wrapper">
+            <label class="checkbox">
+              <span class="label">Page 2</span>
+              <input type="checkbox" class="item-checkbox" />
+              <span class="checkmark">
+                <svg
+                  width="19"
+                  height="14"
+                  viewBox="0 0 19 14"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1 7.6L7.03451 12.9672C7.05497 12.9854 7.08626 12.9837 7.1047 12.9635L18 1"
+                    stroke="white"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </span>
+            </label>
+          </div>
+
+          <!-- Page 3 -->
+          <div class="checkbox-wrapper">
+            <label class="checkbox">
+              <span class="label">Page 3</span>
+              <input type="checkbox" class="item-checkbox" />
+              <span class="checkmark">
+                <svg
+                  width="19"
+                  height="14"
+                  viewBox="0 0 19 14"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1 7.6L7.03451 12.9672C7.05497 12.9854 7.08626 12.9837 7.1047 12.9635L18 1"
+                    stroke="white"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </span>
+            </label>
+          </div>
+
+          <!-- Page 4 -->
+          <div class="checkbox-wrapper">
+            <label class="checkbox">
+              <span class="label">Page 4</span>
+              <input type="checkbox" class="item-checkbox" />
+              <span class="checkmark">
+                <svg
+                  width="19"
+                  height="14"
+                  viewBox="0 0 19 14"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1 7.6L7.03451 12.9672C7.05497 12.9854 7.08626 12.9837 7.1047 12.9635L18 1"
+                    stroke="white"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Divider -->
+        <div class="divider-wrapper">
+          <div class="divider"></div>
+        </div>
+
+        <!-- Button -->
+        <div class="button-wrapper">
+          <button class="default-button">Done</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+      document
+        .querySelector('.select-all')
+        .addEventListener('change', function () {
+          document.querySelectorAll('.item-checkbox').forEach((checkbox) => {
+            checkbox.checked = this.checked;
+          });
+        });
+    </script>
+  </body>
+</html>

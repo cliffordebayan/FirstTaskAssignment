@@ -1,0 +1,248 @@
+/* Importing Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Define CSS variables */
+:root {
+  /* Font Styles */
+  --font-family: 'Montserrat', sans-serif;
+  --font-weight-normal: 400;
+  --font-size-small: 14px;
+  --line-height-small: 18.2px;
+
+  /* Background Colors */
+  --background-color-light: #f5f5f5;
+  --background-color-white: #ffffff;
+
+  /* Border and Stroke Colors */
+  --border-color-light: #cdcdcd;
+  --border-color-hover: #bdbdbd;
+  --border-color-active: rgba(36, 105, 246, 0.1);
+  --stroke-color-light: #e3e3e3;
+  --stroke-color-dark: #878787;
+
+  /* Checkbox Colors */
+  --checkbox-background: #ffffff;
+  --checkbox-border: #cdcdcd;
+  --checkbox-border-hover: #bdbdbd;
+  --checkbox-background-checked: #2469f6;
+  --checkbox-background-hover-checked: #5087f8;
+  --checkmark-color: #ffffff;
+
+  /* Label Color */
+  --label-color: #1f2128;
+
+  /* Button Colors */
+  --button-background: #ffce22;
+  --button-background-hover: #ffd84d;
+  --button-background-active: #ffce22;
+  --button-color: #1f2128;
+}
+
+/* Resetting margins, paddings, and borders */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  width: fit-content;
+  margin: 0;
+  padding: 0;
+}
+
+/* Resetting button and input styles */
+button,
+input {
+  font: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+  border: none;
+  outline: none;
+  padding: 0;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Body styles */
+body {
+  background: var(--background-color-light);
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-normal);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Frame styles */
+.frame {
+  position: relative;
+  width: 578px;
+  height: 794px;
+  background: var(--background-color-white);
+}
+
+/* Card styles */
+.card {
+  position: absolute;
+  top: 85px;
+  left: 104px;
+  display: flex;
+  flex-direction: column;
+  width: 370px;
+  height: 326px;
+  row-gap: 10px;
+  padding: 10px 0;
+  border-radius: 6px;
+  border: 1px solid #eeeeee;
+  box-shadow: 0px 8px 15px 0px #1414141f, 0px 0px 4px 0px #1414141a;
+}
+
+/* Checkbox styles */
+.checkbox-wrapper {
+  width: 100%;
+  max-width: 370px;
+  height: 42px;
+}
+.checkbox {
+  width: 100%;
+  height: inherit;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--background-color-white);
+  padding: 8px 15px 8px 22px;
+  cursor: pointer;
+}
+
+.checkmark {
+  width: 23px;
+  height: 23px;
+  background-color: var(--background-color-white);
+  border-radius: 6px;
+  border: 1px solid var(--checkbox-border);
+  opacity: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.checkmark svg {
+  width: 15.64px;
+  height: 11.04px;
+  display: none;
+}
+
+.checkbox input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  margin: 0;
+}
+
+.checkbox:hover .checkmark,
+.checkbox:active .checkmark {
+  background-color: var(--background-color-white);
+  border: 1px solid var(--checkbox-border-hover);
+  opacity: 100%;
+}
+
+.checkbox:hover .checkmark svg,
+.checkbox:active .checkmark svg {
+  display: block;
+}
+
+.checkbox:hover .checkmark svg path {
+  stroke: var(--stroke-color-light);
+}
+.checkbox:active .checkmark svg path {
+  stroke: var(--stroke-color-dark);
+}
+.checkbox:active .checkmark {
+  outline: 3px solid var(--border-color-active);
+}
+
+.checkbox input:checked + .checkmark {
+  background-color: var(--checkbox-background-checked);
+  border: none;
+  opacity: 100%;
+}
+
+.checkbox:hover input:checked + .checkmark {
+  background-color: var(--checkbox-background-hover-checked);
+  border: none;
+  opacity: 100%;
+}
+
+.checkbox input:checked + .checkmark svg {
+  display: block;
+}
+
+.checkbox input:checked + .checkmark svg path {
+  stroke: var(--checkmark-color);
+}
+
+/* Label styles */
+.label {
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-normal);
+  font-size: var(--font-size-small);
+  line-height: var(--line-height-small);
+  color: var(--label-color);
+}
+
+/* Divider styles */
+.divider-wrapper {
+  width: 100%;
+  max-width: 370px;
+  display: flex;
+  justify-content: center;
+}
+
+.divider {
+  height: 0.7px;
+  background-color: var(--border-color-light);
+  width: 340px;
+}
+
+.pages-wrapper {
+  width: 100%;
+  max-width: 370px;
+}
+
+/* Button styles */
+.button-wrapper {
+  width: 100%;
+  max-width: 370px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--background-color-white);
+}
+
+.default-button {
+  width: 340px;
+  height: 40px;
+  border-radius: 4px;
+  padding: 10px 20px;
+  background: var(--button-background);
+  cursor: pointer;
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-normal);
+  font-size: var(--font-size-small);
+  line-height: var(--line-height-small);
+  color: var(--button-color);
+}
+
+.default-button:hover {
+  background: var(--button-background-hover);
+}
+
+.default-button:active {
+  background: var(--button-background-active);
+  cursor: default;
+}
